@@ -19,10 +19,20 @@ resource "random_string" "instance_ip" {
   upper   = false
 }
 
+resource "random_string" "subnet_id" {
+  length  = 6
+  special = false
+  upper   = false
+}
+
 output "vpc_id" {
   value = "vpc-${random_string.vpc_id.result}"
 }
 
 output "instance_ip" {
   value = "192.168.${random_string.instance_ip.result}"
+}
+
+output "subnet_id" {
+  value = "subnet-${random_string.subnet_id.result}"
 }
