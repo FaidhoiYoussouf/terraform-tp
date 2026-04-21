@@ -42,3 +42,5 @@ resource "random_string" "test_resource" {
   special = false
   upper   = false
 }
+
+# Test pour l'apply
