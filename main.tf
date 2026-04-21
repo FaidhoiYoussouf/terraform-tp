@@ -36,3 +36,9 @@ output "instance_ip" {
 output "subnet_id" {
   value = "subnet-${random_string.subnet_id.result}"
 }
+
+resource "random_string" "test_resource" {
+  length  = 4
+  special = false
+  upper   = false
+}
